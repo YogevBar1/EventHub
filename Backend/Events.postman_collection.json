@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "66d3c05b-4768-4dcb-a1d2-eeb738af2b14",
+		"name": "Events",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10634848"
+	},
+	"item": [
+		{
+			"name": "Get all event categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get events by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/events-by-category/6513c9f2de3e6e1a8de90226",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"events-by-category",
+						"6513c9f2de3e6e1a8de90226"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"categoryId\":\"6513c9f2de3e6e1a8de90226\",\r\n    \"eventDate\": \"15/05/2022 14:44\",\r\n    \"eventDescription\": \"Avi and Hen Weddeing\",\r\n    \"eventAddress\": \"Tel Aviv\",\r\n    \"eventAmountPeople\": 555\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Event",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"categoryId\":\"650ee4be713056a7d0228715\",\r\n  \"productName\":\"Milk\",\r\n  \"manufacturingDate\":\"19/11/2022\",\r\n  \"expirationDate\":\"19/11/2023\",\r\n  \"price\": 55\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/events/6513d2b7b8abae9e9987ea9d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"events",
+						"6513d2b7b8abae9e9987ea9d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
